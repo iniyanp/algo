@@ -14,6 +14,7 @@ public class CheckBSTByPreOrder {
 
     private static void checkBST(Stack<Integer> stack, List<Integer> nos){
 
+        //Incomplete.
 
         for(int i = 0; i < nos.size(); i++){
 
