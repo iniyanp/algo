@@ -5,6 +5,18 @@ package algos;
  */
 public class Permutation {
 
+    public static void combine(String instr, StringBuffer outstr, int index)
+    {
+
+        for (int i = index; i < instr.length(); i++)
+        {
+            outstr.append(instr.charAt(i));
+            System.out.println(outstr);
+
+            combine(instr, outstr, i + 1);
+            outstr.deleteCharAt(outstr.length() - 1);
+        }
+    }
     public static void permute(String input, String output){
 
         if(input.length() == 0) {
@@ -27,6 +39,8 @@ public class Permutation {
 
     public static void main(String[] args) {
         permute("123", new String());
+        System.out.println("#######");
+        combine("123",new StringBuffer(),0);
         System.out.println(reverse("Iniyan"));
     }
 
