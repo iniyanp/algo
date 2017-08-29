@@ -78,10 +78,11 @@ public class DetectCycleInDirectedGraph {
 
     public static void main(String[] args) {
 
-        Graph g = new Graph(3);
+        Graph g = new Graph(4);
         g.addEdges(0, 1);
         g.addEdges(1, 2);
-        g.addEdges(0, 2);
+        g.addEdges(2, 3);
+        g.addEdges(3, 0);
         DetectCycleInDirectedGraph d = new DetectCycleInDirectedGraph();
         System.out.println(d.detect(g));
     }

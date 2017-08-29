@@ -62,7 +62,6 @@ public class MaxPathInBT {
             innerResult.add(root.getData());
             traversal(root.getLeft(), innerResult, result);
             traversal(root.getRight(), innerResult, result);
-            if(innerResult.size() > 0) innerResult.remove(innerResult.size() - 1);
         }
 
     }

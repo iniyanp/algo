@@ -5,7 +5,7 @@ package algos;
  */
 public class MaxSubSetSum {
 
-
+//Continuous max subset .
 
     public static void main(String[] args) {
 

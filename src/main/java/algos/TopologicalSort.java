@@ -43,6 +43,7 @@ public class TopologicalSort {
             visited.add(i, false);
         }
         List<List<Integer>> adjList = g.adjacenyList;
+        System.out.println(adjList.get(0));
 
         Stack<Integer> result = new Stack<>();
 
@@ -59,8 +60,9 @@ public class TopologicalSort {
 
         if(!visited.get(v)){
             //DFS
-            System.out.println(v);
+            //System.out.println(v);
             visited.set(v, true);
+
             for (int neighbour : adjList.get(v)) {
                 sortUtil(neighbour, adjList, visited, stack);
             }
@@ -80,8 +82,9 @@ public class TopologicalSort {
         g.addEdges(4, 1);
         g.addEdges(2, 3);
         g.addEdges(3, 1);
+
         sort(g);
-        System.out.println(g.adjacenyList);
+        //System.out.println(g.adjacenyList);
 
     }
 }

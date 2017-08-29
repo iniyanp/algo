@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Created by paramasivami on 4/17/16.
+ * It would print all paths from start to end.
  */
 public class Maze {
 
@@ -13,29 +14,22 @@ public class Maze {
 
 
 
-        if(x >= matrix.length || y >= matrix.length) return;
+        if(x >= matrix.length || y >= matrix.length || matrix[x][y] != 1) return;
 
         if(matrix[x][y] == 1)
             resultPath.add(x + "" + y);
-        else
-            return;
 
         if(x == matrix.length - 1 && y == matrix.length - 1 && matrix[x][y] == 1){
             resultPath.forEach(
                     path -> System.out.print(path + " ")
             );
             System.out.println();
-            resultPath.remove(resultPath.size() - 1);
-            return;
+        }else{
+            //Considered below and bottom paths only.
+            solve(matrix, x, y+1, resultPath);
+            solve(matrix, x+1, y, resultPath);
         }
-
-        //Considered below and bottom paths only.
-        solve(matrix, x, y+1, resultPath);
-        solve(matrix, x+1, y, resultPath);
-
         resultPath.remove(resultPath.size() - 1);
-
-
     }
 
     public static void main(String[] args) {

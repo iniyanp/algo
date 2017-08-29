@@ -52,7 +52,7 @@ public class PermutationUsingList {
         elements.add(2);
         elements.add(3);
         //System.out.println(elements);
-        //permute(elements,new ArrayList<>());
-        combine(elements, new ArrayList<>(),0);
+        permute(elements,new ArrayList<>());
+//        combine(elements, new ArrayList<>(),0);
     }
 }
