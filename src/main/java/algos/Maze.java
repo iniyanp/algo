@@ -6,6 +6,10 @@ import java.util.List;
 /**
  * Created by paramasivami on 4/17/16.
  * It would print all paths from start to end.
+ * This is backtracking.
+ *
+ *
+ *
  */
 public class Maze {
 

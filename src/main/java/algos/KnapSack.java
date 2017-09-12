@@ -10,7 +10,12 @@ import java.util.List;
  */
 public class KnapSack {
 
+    //Given coins and target how much max, you can collect.
+
     //You can't take more than 1 of item.
+
+
+
 
     public static int ks(List<Integer> val, int totalWeight, int maxWeight){
 
@@ -18,15 +23,15 @@ public class KnapSack {
 
             if(totalWeight < val.get(val.size() - 1)){
                 val.remove(val.size() -1);
-                int result = ks(val, totalWeight, maxWeight);
-                return result;
+                return ks(val, totalWeight, maxWeight);
             }else{
 
                 int element = val.remove(val.size()-1);
 
                 int first = ks(val, totalWeight - element, maxWeight + element); //select
                 int second = ks(val, totalWeight, maxWeight); //no select
-                return Math.max(first, second); //Max among those two.
+                int p = Math.max(first, second); //Max among those two.
+                return p;
             }
 
     }
@@ -39,7 +44,7 @@ public class KnapSack {
         val.add(5);
         val.add(10);
 
-        System.out.println(ks(val, 9, 0));
+        System.out.println(ks(val, 10, 0));
 
 
     }

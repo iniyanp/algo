@@ -38,10 +38,25 @@ public class Permutation {
     }
 
     public static void main(String[] args) {
-        permute("123", new String());
-        System.out.println("#######");
-        combine("123",new StringBuffer(),0);
-        System.out.println(reverse("Iniyan"));
+//        permute("123", new String());
+//        System.out.println("#######");
+//        combine("123",new StringBuffer(),0);
+//        System.out.println(reverse("Iniyan"));
+
+        printNonOverlapping("123");
+    }
+
+    public static void printNonOverlapping (String number) {
+        printNonOverlapping (number, "");
+    }
+
+    public static void printNonOverlapping (String number, String prefix) {
+        System.out.println (prefix + "(" + number + ")");
+        for (int i=1; i<number.length(); i++) {
+            String newPrefix = prefix + "(" + number.substring(0,i) + ")";
+           // System.out.println(number.substring(0,i) + "\t" + number.substring (i));
+            printNonOverlapping (number.substring (i), newPrefix);
+        }
     }
 
 
