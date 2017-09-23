@@ -2,6 +2,9 @@ package algos;
 
 /**
  * Created by paramin on 8/30/17.
+ *
+ * You have unlimited supply of coins.How many ways you can make a change for a given value and set of coins.
+ *
  */
 public class Changes {
 
@@ -16,7 +19,7 @@ public class Changes {
         if (n < 0)
             return 0;
 
-        // If there are no coins and n is greater than 0, then no solution exist
+        // If there are no coins and n is greater than 1, then no solution exist
         if (m <=0 && n >= 1)
             return 0;
 
@@ -25,6 +28,6 @@ public class Changes {
     }
 
     public static void main(String[] args) {
-       System.out.println(count(new int[]{1,5,10}, 3,50));
+       System.out.println(count(new int[]{1,5,10}, 3,5));
     }
 }
