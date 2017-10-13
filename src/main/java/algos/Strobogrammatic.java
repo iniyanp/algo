@@ -25,7 +25,10 @@ public class Strobogrammatic {
         for (int i = 0; i < list.size(); i++) {
             String s = list.get(i);
 
-            if (n != m) res.add("0" + s + "0");
+            if (n != m) {
+
+                res.add("0" + s + "0");
+            }
 
             res.add("1" + s + "1");
             res.add("6" + s + "9");
@@ -37,7 +40,7 @@ public class Strobogrammatic {
     }
 
     public static void main(String[] args) {
-        List<String> l = findStrobogrammatic(3);
+        List<String> l = findStrobogrammatic(4);
         l.forEach(x -> System.out.println(x));
     }
 }

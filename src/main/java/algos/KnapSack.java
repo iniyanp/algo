@@ -44,7 +44,7 @@ public class KnapSack {
         val.add(5);
         val.add(10);
 
-        System.out.println(ks(val, 10, 0));
+        System.out.println(ks(val, 9, 0));
 
 
     }

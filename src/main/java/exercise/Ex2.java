@@ -85,6 +85,14 @@ public class Ex2 {
     }
 
 
+    /**
+     * It is not necesary that function has to return true.
+     * Function might return something.But you have to return boolean condition based on that.
+     *
+     * @param root
+     * @param n1
+     * @return
+     */
     public int pathLen(Node root, int n1) {
 
         if(root != null){
