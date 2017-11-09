@@ -21,7 +21,10 @@ public class MinPathSum {
 
 
         if(m < grid.length - 1) rowVal = minPathSumHelper(m+1, n, cache, grid, rowVal, colVal);
-        if(n < grid[0].length - 1) colVal = minPathSumHelper(m, n+1, cache, grid, rowVal, colVal);
+        if(n < grid[0].length - 1) {
+            System.out.println(n);
+            colVal = minPathSumHelper(m, n+1, cache, grid, rowVal, colVal);
+        }
 
         cache[m][n] = Math.min(rowVal, colVal) + grid[m][n];
         return cache[m][n];
@@ -30,9 +33,9 @@ public class MinPathSum {
 
     public static void main(String[] args) {
         int[][] ques = new int[][]{
-                {1,1,1},
-                {0,1,1},
-                {1,1,1}
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
         };
         System.out.println(minPathSum(ques));
     }
