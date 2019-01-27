@@ -51,12 +51,13 @@ public class Permutation {
     }
 
     public static void printNonOverlapping (String number, String prefix) {
-        System.out.println (prefix + "(" + number + ")");
-        for (int i=1; i<number.length(); i++) {
-            String newPrefix = prefix + "(" + number.substring(0,i) + ")";
-           // System.out.println(number.substring(0,i) + "\t" + number.substring (i));
-            printNonOverlapping (number.substring (i), newPrefix);
-        }
+//        System.out.println (prefix + "(" + number + ")");
+//        for (int i=1; i<number.length(); i++) {
+//            String newPrefix = prefix + "(" + number.substring(0,i) + ")";
+//           // System.out.println(number.substring(0,i) + "\t" + number.substring (i));
+//            printNonOverlapping (number.substring (i), newPrefix);
+//        }
+        combine("abc",new StringBuffer(""),0);
     }
 
 

@@ -92,13 +92,16 @@ public class WordLadder {
         queue.add(new Ladder(1, beginWord, path));
         wordList.remove(beginWord);
 
+        List<Ladder> resultList = new LinkedList<>();
 
         while(!queue.isEmpty() && !queue.peek().equals(endWord)){
 
             Ladder ladder = queue.remove();
             if(ladder.getLastWord().equals(endWord)){
+
                 System.out.println(ladder.getPath());
-                return ladder.getLength();
+                resultList.add(ladder);
+//                return ladder.getLength();
             }
 
             Iterator<String> it = wordList.iterator();
@@ -110,14 +113,16 @@ public class WordLadder {
                     path = new LinkedList(ladder.getPath());
                     path.add(word);
                     queue.add(new Ladder(ladder.getLength() + 1, word, path));
-                    it.remove();
+                    it.remove(); //remove the element while iterating only using iterator.
                 }
             }
         }
-        if(!queue.isEmpty()){
-            System.out.println(queue.peek().getPath());
-            return queue.peek().getLength();
-        }
+//        if(!queue.isEmpty()){
+//            System.out.println(queue.size());
+//            System.out.println(queue.peek().getPath());
+//            return queue.peek().getLength();
+//        }
+        System.out.println(resultList);
         return 0;
 
     }

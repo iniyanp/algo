@@ -53,7 +53,7 @@ public class MeetingRoom {
         System.out.println("In main");
         Interval i[] = new Interval[3];
         i[0] =  m.new Interval(1,100);
-        i[1] =  m.new Interval(2,4);
+        i[1] =  m.new Interval(2,8);
         i[2] =  m.new Interval(6,7);
         System.out.println(m.minMeetingRooms(i));
     }

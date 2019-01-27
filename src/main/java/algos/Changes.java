@@ -28,6 +28,6 @@ public class Changes {
     }
 
     public static void main(String[] args) {
-       System.out.println(count(new int[]{1,5,10}, 3,5));
+       System.out.println(count(new int[]{1,5,10}, 3,10));
     }
 }
