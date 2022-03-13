@@ -1,5 +1,7 @@
 class Solution {
     
+    //https://www.youtube.com/watch?v=ddTC4Zovtbc&t=50s&ab_channel=TusharRoy-CodingMadeSimple
+    
     public Map<Integer, List<Integer>> constructGraph(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> graphMap = new HashMap<>();
             for(int i=0;i<prerequisites.length;i++) {
@@ -29,6 +31,9 @@ class Solution {
         }
         return stack;
     }
+    
+    //Basically Topological sort is recursive inside for loop.
+    //Visit all of a node's children (recurively) before put a node in a stack. 
     
     public void dfs(Map<Integer, List<Integer>> graphMap, int key, Set<Integer> visited, Stack stack) {
 
